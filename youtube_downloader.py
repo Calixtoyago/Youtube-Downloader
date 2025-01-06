@@ -66,25 +66,15 @@ def baixar_audio(link, only_audio=False):
 def converter_arquivo(file, sufix=str):
     inp = file
     out = file[:-4] + sufix
-    
-    
+
     ff = FFmpeg()
     try:
         ff.convert(inp, out)
     except:
         pass
 
-    while True:
-        try:
-            opcao = input('Deseja remover o arquivo anterior: [S/N] ').strip().lower()[0]
-            if opcao not in ('s', 'n'):
-                raise ValueError ('Error - Insira \'s\' ou \'n\'')
-            if opcao == 's':
-                os.remove(file)
-        except ValueError as ve:
-            print(ve)
-        else:
-            break
+    os.remove(file)
+
 
 def menu():
     link = input('Link: ')
