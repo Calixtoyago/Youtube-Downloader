@@ -11,8 +11,10 @@ for notes on deploying the project on a live system.
 ### Prerequisites
 
 Requirements for the software and other tools to build, test and push 
-- [Example 1](https://www.example.com)
-- [Example 2](https://www.example.com)
+- [Python](https://www.python.org/)
+- [Pytubefix](https://pytubefix.readthedocs.io/en/latest/user/install.html)
+- [Pyffmpeg](https://github.com/deuteronomy-works/pyffmpeg)
+- [Moviepy](https://zulko.github.io/moviepy/)
 
 ### Installing
 
