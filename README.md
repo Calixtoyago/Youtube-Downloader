@@ -1,7 +1,6 @@
 # Youtube Downloader
 
-Initially appeared on
-[gist](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2). But the page cannot open anymore so that is why I have moved it here.
+Created this project after I needed to download some videos from youtube but every site I tryied wasn't working
 
 ## Getting Started
 
