@@ -52,11 +52,12 @@ def escolher_resolucao(link):
 
     return opcao, resolution_list
 
-def baixar_audio(link):
+def baixar_audio(link, only_audio=False):
     yt = YouTube(link)
     stream = yt.streams.filter(mime_type="audio/mp4").first()
     downloaded_file = stream.download()
-    converter_arquivo(downloaded_file, '.mp4')
+    if only_audio:
+        converter_arquivo(downloaded_file, '.mp4')
     return downloaded_file
 
     # title = yt.title
@@ -109,7 +110,7 @@ def menu():
         baixar_video(link, resolution, False)
         
     if opcao == '1':
-        baixar_audio(link)
+        baixar_audio(link, True)
 
     elif opcao == '2':
         opcao, resolution_list = escolher_resolucao(link)
@@ -120,4 +121,4 @@ def menu():
 
 
 menu()
-
+input()
